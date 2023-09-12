@@ -46,9 +46,42 @@ REST API란?
 
 **REST API Best Practice**
 https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/
-> 끝에는 동사 대신에 명사를 사용할 것, 복수형을 사용할 것, Status Code 활용하기 등등..
+> 끝에는 동사 대신에 명사를 사용할 것(중요), 동작은 HTTP 메소드를 사용할 것, Status Code 활용하기(보안적 측면에도 중요) 등등..
 
+---
+**Spring Boot 특징**
+- 제어 역전
+> IoC 컨테이너 제공, 객체의 생성과 관계 설정을 스프링에 위임
+- 의존성 주입
+> 객체 간 관계 설정, 결합도를 낮추고 유연성과 테스트 용이성 향상
+- AOP(관점지향 프로그래밍) 지원
+> 이를 통해 애플리케이션의 핵심 비즈니스 로직과 부가적인 기능(로깅, 트랜잭션 관리 등)을 분리 가능 => 모듈화
+- 웹 개발 지원
+> MVC 아키텍처 지원
 
+**MVC**
+- Model
+  - Data와 애플리케이션이 무엇을 할 것인지를 정의하는 부분, 내부 비즈니스 로직을 처리하기 위한 역할을 함.
+- View
+  - 사용자에게 보여주는 화면(UI), 여러 개 존재 가능, 상태가 없고 데이터 조작 X
+- Controller
+  - Model과 View 사이를 이어주는 인터페이스 역할
+
+*어떤 곳으로 분류할지 실무에선 많은 고민이 필요함*
+
+**Controller와 RestController의 차이
+https://www.geeksforgeeks.org/difference-between-controller-and-restcontroller-annotation-in-spring/
+> Controller는 view를 반환, 데이터를 반환하려면 @Controller와 @ResponseBody를 조합하여 사용
+> RestController는 Data(주로 json)를 반환, @RestController는 @Controller와 @ResponseBody의 동작을 하나로 결합한 것  
+
+- @Service
+  - 비즈니스 로직, 트랜잭션 처리 담당, Repository에서 얻어온 정보를 가공 후 다시 Controller에 보냄
+ 
+- @Repository
+  - 해당 클래스가 DB에 접근하는 클래스임을 명시함
+
+**예측을 하기 쉽도록 빠른 피드백**
+Swagger등을 이용하여 API 스펙을 정해두어야 업무가 수월해짐
 
 
 
