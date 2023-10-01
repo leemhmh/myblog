@@ -9,6 +9,7 @@ Spring Security
 - 권한(Authorize)은 인증된 사용자가 어떤 것을 할 수 있는지를 의미한다.
 
 구현 예시(출처: https://adjh54.tistory.com/92)
+---
 Spring Security를 이용하기 위한 객체로 사용
 UserDetails의 실제 구현체
 ```
