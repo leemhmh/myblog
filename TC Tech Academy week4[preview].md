@@ -5,8 +5,25 @@ Spring Security
 
 # 1. 스프링 시큐리티란?
 스프링 기반 애플리케이션의 인증과 권한을 담당하는 스프링의 하위 프레임워크
-- 인증(Authenticate)은 로그인을 의미한다.
+- 인증(Authenticate)은 사용자의 신원을 입증하는 과정으로, 로그인을 의미한다.
 - 권한(Authorize)은 인증된 사용자가 어떤 것을 할 수 있는지를 의미한다.
+이름에 걸맞게 보안 관련 옵션을 다수 제공하며 복잡한 로직 없이 어노테이션으로 설정 가능
+여러 보안 위협을 방어해주고 요청 헤더도 보안 처리 해줌. 기본적으로 세션 기반 인증 제공
+
+# 2. 스프링 시큐리티 동작 방식
+스프링 시큐리티는 필터 기반으로 동작한다.
+필터의 종류는 매우 다양하며, 각 필터에서 인증, 인가와 관련된 작업을 처리한다.
+
+![image](https://github.com/leemhmh/myblog/assets/91586116/94b1b500-bccf-47ce-ac80-fda4912902fc)
+
+SecurityContextPersistenceFilter부터 시작해서 아래로 내려가며 FilterSecurityIntercepter까지 순서대로 필터를 거침.
+어피치 스티커가 붙어 있는 Intercepter는 아이디와 패스워드가 넘어오면 인증 요청을 위임하는 인증 관리자 역할을 함
+프로도 스티커가 붙어있는 Intercepter는 권한 부여 처리를 위임해 접근 제어 결정을 쉽게 하는 접근 결정 관리자 역할을 함
+
+![image](https://github.com/leemhmh/myblog/assets/91586116/8b0ce395-d85b-41b9-9747-7af4b05cbdc2)
+![image](https://github.com/leemhmh/myblog/assets/91586116/94c6f6d0-61ba-47fa-aded-0009b007c83b)
+
+
 
 구현 예시(출처: https://adjh54.tistory.com/92)
 ---
@@ -250,3 +267,5 @@ Spring Security 환경설정
 
 
 ## 위와 같은 구현들을 통해 로그인 기능을 구축할 수 있다.
+
+#회원 가입 구현(참조: https://devhan.tistory.com/310)
