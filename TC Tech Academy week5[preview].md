@@ -136,6 +136,23 @@ git add 취소하기
 - 주어진 하나의 호스트OS안에서 여러 컨테이너를 동시에 실행하고 컨테이너의 라이프 사이클을 관리함
 - 최근에는 거의 하나의 표준이 되어가고 있음
 
+컨테이너 라이프 사이클
+- 컨테이너 생성
+- 컨테이너 실행
+  - docker container run ~~ (편리하여 흔히 사용)
+  - --name(이름 명시), -it(컨테이너 내부 접속), -d(백그라운드로 실행), -e(컨테이너 시작시 환경 변수 설정), -p(Host 포트와 컨테이너 포트 연결), -v(볼륨 연결)
+  - docker image pull ~~ -> docker container create ~~ -> docker container start ~~ -> docker container attach 
+  - 오버라이딩 가능
+- 컨테이너 상태 확인
+- 컨테이너 정지
+  - docker container stop 컨테이너 ID 또는 컨테이너 명
+- 컨테이너 재시작
+  - docker container restart 컨테이너 ID 또는 컨테이너 명
+- 컨테이너 삭제
+  - docker container rm 컨테이너 ID 또는 컨테이너 명
+  - 실행 중인 컨테이너 삭제 불가(stop 후 삭제) 또는 -f를 활용하여 실행 중인 컨테이너 삭제
 
-
- 
+ Docker Volume
+ - 컨테이너가 삭제되면, 컨테이너에 저장된 데이터도 제거됨(복구 불가)
+ - Docker 컨테이너의 데이터는 외부에 저장하고 제공받도록 설계하는 것을 지향(stateless)
+ - 대표적인 방식이 바로 Host의 Volume을 공유하는 것
