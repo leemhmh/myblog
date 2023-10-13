@@ -79,4 +79,26 @@ OAuth는 인터넷 사용자들이 비밀번호를 제공하지 않고 다른 �
 
 # Git, Git Action과 Docker를 활용한 서비스 배포
 
+## Git과 Git Hub
+Git
+- VCS(Version Control System)의 일종으로 프로그램의 버전 관리를 위한 툴.
+Git Hub
+- it으로 관리하는 프로젝트들을 온라인 공간에 공유해서 프로젝트 구성원들이 함께 소프트웨어를 만들어갈 수 있도록 돕는 코드 공유 및 협업 서비스
+- 온라인 git 저장소는 모든 업로드와 다운로드를 커밋 단위로 주고 받는다.
 
+## 프로젝트 생성
+터미널 열어서 폴더 경로에서 git 연동 
+- git init
+
+git 현재 상태 확인
+- git status
+
+.gitignore 파일 설정
+(모든 file.c)
+- file.c
+
+최상위 폴더의 file.c
+- /file.c
+
+모든 .c 확장자 파일
+- *.c
