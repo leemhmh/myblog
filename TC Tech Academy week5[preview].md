@@ -102,3 +102,24 @@ git 현재 상태 확인
 
 모든 .c 확장자 파일
 - *.c
+
+## Git에 파일 반영하기
+버전에 파일 담기
+- git add filename.py
+
+모든 파일 담기
+- git add .
+
+git add 취소하기
+- git rm --cached <file>
+
+버전으로 묶어주기
+(vi 입력모드로 진입)
+- git commit
+
+커밋 메세지 한 번에 작성
+- git commit -m "comment"
+
+커밋 이력 확인
+- git log
+
