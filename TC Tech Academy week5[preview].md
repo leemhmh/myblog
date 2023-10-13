@@ -155,4 +155,4 @@ git add 취소하기
  Docker Volume
  - 컨테이너가 삭제되면, 컨테이너에 저장된 데이터도 제거됨(복구 불가)
  - Docker 컨테이너의 데이터는 외부에 저장하고 제공받도록 설계하는 것을 지향(stateless)
- - 대표적인 방식이 바로 Host의 Volume을 공유하는 것
+ - 대표적인 방식이 바로 Host의 Volume을 공유하는 방식
